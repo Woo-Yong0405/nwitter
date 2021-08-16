@@ -1,7 +1,14 @@
+import React, {useState} from "react";
+import AppRouter from "components/Router";
+import {authService} from "fb";
 
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(authService.currentUser);
   return (
-    <div className="App"></div>
+    <>
+      <AppRouter isLoggedIn={isLoggedIn} />
+      <footer>&copy; {new Date().getFullYear()} Nwitter</footer>
+    </>
   );
 }
 
