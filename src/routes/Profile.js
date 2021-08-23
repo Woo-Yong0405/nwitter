@@ -2,7 +2,7 @@ import { authService, dbService } from "fb";
 import React, { useEffect } from "react";
 import { useHistory } from "react-router-dom";
 
-export default ({userObj}) => {
+const Profile = ({userObj}) => {
     const history = useHistory();
     const onLogOutClick = () => {
         authService.signOut();
@@ -14,10 +14,12 @@ export default ({userObj}) => {
     }
     useEffect(() => {
         getMyNweets(); 
-    }, [])
+    });
     return (    
         <>
             <button onClick={onLogOutClick}>Log Out</button>
         </>
     )
 }
+
+export default Profile;
