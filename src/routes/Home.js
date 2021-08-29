@@ -2,6 +2,7 @@ import Nweet from "components/Nweet";
 import {v4 as uuidv4} from "uuid"
 import { dbService, storageService } from "fb";
 import React, {useState, useEffect} from "react";
+import "components/Styles.css";
 
 const Home = ({ userObj }) => {
     const [nweet, setNweet] = useState("");
@@ -52,7 +53,7 @@ const Home = ({ userObj }) => {
     }
     return (
         <div>
-            <form onSubmit={onSubmit}>
+            <form class="form" onSubmit={onSubmit}>
                 <input value={nweet} onChange={onChange} type="text" placeholder="What's on your mind?" maxLength={120} />
                 <input type="file" accept="image/*" onChange={onFileChange} />
                 <input type="submit" value="Nweet" />

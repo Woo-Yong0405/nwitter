@@ -1,6 +1,7 @@
 import { authService } from "fb";
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
+import "components/Styles.css";
 
 const Profile = ({refreshUser, userObj}) => {
     const history = useHistory();

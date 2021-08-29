@@ -1,4 +1,5 @@
 import { dbService, storageService } from "fb";
+import "components/Styles.css";
 import React, { useState } from "react";
 
 const Nweet = ({nweetObj, isOwner}) => {
