@@ -41,22 +41,28 @@ const Auth = () => {
             provider = new firebaseInstance.auth.GoogleAuthProvider();
         } else if (name === "github") {
             provider = new firebaseInstance.auth.GithubAuthProvider();
+        } else if (name === "facebook") {
+            provider = new firebaseInstance.auth.FacebookAuthProvider();
         }
-        const data = await authService.signInWithPopup(provider);
-        console.log(data);
+        await authService.signInWithPopup(provider);
     }
 return (
-    <div>
-        <form onSubmit={onSubmit}>
+    <div className="login" >
+        <h1>Welcome to Nwitter!</h1>
+        <form className="formform" onSubmit={onSubmit}>
             <input name="email" type="text" placeholder="Email" required value={email} onChange={onChange} />
             <input name="password" type="password" placeholder="Password" required value={password} onChange={onChange} />
             <input type="submit" value={newAccount ? "Sign Up" : "Log In"} />
             {error}
         </form>
-        <span onClick={toggleAccount}>{newAccount ? "Log In" : "Sign Up"}</span>
-        <div>
-            <button onClick={onSocialCLick} name="google">Continue with Google</button>
-            <button onClick={onSocialCLick} name="github">Continue with Github</button>
+        <span className="loginsignup" onClick={toggleAccount}>{newAccount ? "Log In" : "Sign Up"}</span>
+        <div className="sociallogin">
+            <button onClick={onSocialCLick} name="google">Google</button>
+            <button onClick={onSocialCLick} name="github">Github</button>
+            <button onClick={onSocialCLick} name="facebook">Facebook</button>
+        </div>
+        <div className="footer">
+            <footer>Nwitter Version 0.0 Last Editied: 2021.8.30</footer>
         </div>
     </div>
 )}

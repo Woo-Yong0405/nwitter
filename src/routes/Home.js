@@ -2,7 +2,6 @@ import Nweet from "components/Nweet";
 import {v4 as uuidv4} from "uuid"
 import { dbService, storageService } from "fb";
 import React, {useState, useEffect} from "react";
-import "components/Styles.css";
 
 const Home = ({ userObj }) => {
     const [nweet, setNweet] = useState("");
@@ -52,8 +51,8 @@ const Home = ({ userObj }) => {
         setAttachment(null);
     }
     return (
-        <div>
-            <form class="form" onSubmit={onSubmit}>
+        <div >
+            <form onSubmit={onSubmit}>
                 <input value={nweet} onChange={onChange} type="text" placeholder="What's on your mind?" maxLength={120} />
                 <input type="file" accept="image/*" onChange={onFileChange} />
                 <input type="submit" value="Nweet" />
@@ -67,6 +66,7 @@ const Home = ({ userObj }) => {
                     <Nweet key={nweet.id} nweetObj={nweet} isOwner={nweet.creatorId === userObj.uid} />
                 ))}
             </div>
+        <footer>Nwitter Version 0.0 Last Editied: 2021.8.30</footer>
         </div>
     )
 };

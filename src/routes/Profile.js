@@ -1,7 +1,6 @@
 import { authService } from "fb";
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
-import "components/Styles.css";
 
 const Profile = ({refreshUser, userObj}) => {
     const history = useHistory();
@@ -31,7 +30,8 @@ const Profile = ({refreshUser, userObj}) => {
             <input type="text" onChange={onChange} placeholder="Display Name" value={newDisplayName} />
             <input type="submit" value="Update Profile" />
         </form>
-            <button onClick={onLogOutClick}>Log Out</button>
+        <button onClick={onLogOutClick}>Log Out</button>
+        <footer>Nwitter Version 0.0 Last Editied: 2021.8.30</footer>
         </>
     )
 }
