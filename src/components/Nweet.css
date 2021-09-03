@@ -1,0 +1,38 @@
+.nweet-message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.isowner_delete {
+    margin-left: 15px;
+    margin-right: 5px;
+}
+.isowner_delete,
+.isowner_edit,
+.editing_submit,
+.editing_cancel,
+.editing_deleteimg {
+    background-color: #F5F8FA;
+    border: none;
+    border-radius: 10%;
+}
+.editing {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+.editing_input {
+    margin-right: 10px;
+    border-radius: 50px;
+    padding: 7px;
+    border: none;
+}
+.editing_input  {
+    outline: 0;
+}
+.editing_submit {
+    margin-right: 5px;
+}
+.editing_deleteimg {
+    margin-right: 5px;
+}

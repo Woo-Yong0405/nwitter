@@ -1,6 +1,7 @@
 @import "Auth.css";
 @import "Nav.css";
 @import "Home.css";
+@import "Nweet.css";
 
 body {
     width: 100%;
@@ -25,6 +26,8 @@ body {
     margin-top: 10px;
     margin-bottom: 10px;
     border-radius: 20px;
+    padding-bottom: 125px;
+    overflow: scroll;
 }
 footer {
     position: absolute;

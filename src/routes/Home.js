@@ -52,8 +52,13 @@ const Home = ({ userObj }) => {
     }
     return (
         <div >
+            <div>
+                {nweets.map(nweet => (
+                    <Nweet key={nweet.id} nweetObj={nweet} isOwner={nweet.creatorId === userObj.uid} />
+                ))}
+            </div>
             <form className="nweet" onSubmit={onSubmit}>
-                <input className="nweet_input" value={nweet} onChange={onChange} type="text" placeholder="What's on your mind?" maxLength={120} />
+                <input className="nweet_input" value={nweet} onChange={onChange} type="text" placeholder="What's on your mind?" maxLength={120} required />
                 <input className="nweet_image" type="file" accept="image/*" onChange={onFileChange} />
                 {attachment && <div className="nweet_img-preview">
                     <img src={attachment} alt="" />
@@ -61,11 +66,6 @@ const Home = ({ userObj }) => {
                 </div>}
                 <input className="nweet_nweet" type="submit" value="Nweet" />
             </form>
-            <div>
-                {nweets.map(nweet => (
-                    <Nweet key={nweet.id} nweetObj={nweet} isOwner={nweet.creatorId === userObj.uid} />
-                ))}
-            </div>
         <footer>Nwitter Version 0.0 Last Editied: 2021.8.30</footer>
         </div>
     )

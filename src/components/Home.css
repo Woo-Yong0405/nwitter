@@ -7,10 +7,13 @@
     }
 }
 .nweet {
+    position: fixed;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    bottom: 30px;
+    left: 39%;
 }
 .nweet_input {
     width:500px;

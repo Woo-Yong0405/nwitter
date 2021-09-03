@@ -29,24 +29,24 @@ const Nweet = ({nweetObj, isOwner}) => {
         <div>
             {
                 editing ? (
-                    <>
+                    <ds className="editing">
                         <form onSubmit={onSubmit}>
-                            <input type="text" placeholder="Edit your Nweet" onChange={onChange} value={newNweet} required />
-                            <input type="submit" value="Update Nweet" />
+                            <input className="editing_input" type="text" placeholder="Edit your Nweet" onChange={onChange} value={newNweet} required />
+                            <input className="editing_submit" type="submit" value="Update Nweet" />
                         </form>
-                        <button onClick={toggleEditing}>Cancel</button>
-                    </>
+                        <button className="editing_cancel" onClick={toggleEditing}>Cancel</button>
+                    </ds>
                 ) : (
-                    <>
-                        <h4>{nweetObj.text}</h4>
-                        {nweetObj.attachmentUrl && <img src={nweetObj.attachmentUrl} width="50px" height="50px" alt="" />}
+                    <sd className="nweet-message">
+                    <h4>{nweetObj.text}</h4>
+                    {nweetObj.attachmentUrl && <img src={nweetObj.attachmentUrl} width="50px" height="50px" alt="" />}
                         {isOwner && (
-                            <>
-                                <button onClick={onDeleteClick}>Delete Nweet</button>
-                                <button onClick={toggleEditing}>Edit Nweet</button>
-                            </>
+                            <da className="isowner">
+                                <button className="isowner_delete" onClick={onDeleteClick}>Delete Nweet</button>
+                                <button className="isowner_edit" onClick={toggleEditing}>Edit Nweet</button>
+                            </da>
                         )}
-                    </>
+                    </sd>
                 )
             }
         </div>
