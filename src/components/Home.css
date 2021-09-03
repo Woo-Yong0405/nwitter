@@ -1,0 +1,61 @@
+@keyframes borderbottomAni {
+    from {
+        border-bottom: #657786 1px solid;
+    }
+    to {
+        border-bottom: #000 1px solid;
+    }
+}
+.nweet {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.nweet_input {
+    width:500px;
+    padding: 10px;
+    background: 0;
+    border: none;
+    border-bottom: #657786 1px solid;
+    margin-bottom: 10px;
+    color: black;
+    text-align:center;
+    text-decoration: #000;
+}
+::placeholder {
+    color: black;
+}
+.nweet_input:focus-visible {
+    outline: none;
+}
+.nweet_input:focus {
+    animation: borderbottomAni 1s ease-in-out forwards;
+}
+.nweet_image {
+    color:transparent;
+    padding-left: 170px;
+}
+::-webkit-file-upload-button {
+    background-color: #F5F8FA;
+    border:none;
+    border-radius: 10%;
+    font-size: small;
+    margin-bottom: 10px;
+}
+.nweet_img-preview {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+.nweet_img-preview img {
+    width: 50px;
+    height: 50px;
+    margin-right: 5px;
+}
+.nweet_img-preview button,
+.nweet_nweet {
+    background-color: #F5F8FA;
+    border: none;
+    border-radius: 10%;
+}

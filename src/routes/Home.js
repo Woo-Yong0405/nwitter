@@ -52,14 +52,14 @@ const Home = ({ userObj }) => {
     }
     return (
         <div >
-            <form onSubmit={onSubmit}>
-                <input value={nweet} onChange={onChange} type="text" placeholder="What's on your mind?" maxLength={120} />
-                <input type="file" accept="image/*" onChange={onFileChange} />
-                <input type="submit" value="Nweet" />
-                {attachment && <div>
-                    <img src={attachment} width="50px" height="50px" alt="" />
+            <form className="nweet" onSubmit={onSubmit}>
+                <input className="nweet_input" value={nweet} onChange={onChange} type="text" placeholder="What's on your mind?" maxLength={120} />
+                <input className="nweet_image" type="file" accept="image/*" onChange={onFileChange} />
+                {attachment && <div className="nweet_img-preview">
+                    <img src={attachment} alt="" />
                     <button onClick={onClearAttachment}>Clear</button>
                 </div>}
+                <input className="nweet_nweet" type="submit" value="Nweet" />
             </form>
             <div>
                 {nweets.map(nweet => (

@@ -1,5 +1,6 @@
 @import "Auth.css";
 @import "Nav.css";
+@import "Home.css";
 
 body {
     width: 100%;
@@ -28,6 +29,7 @@ body {
 footer {
     position: absolute;
     bottom: 20px;
+    left: 34.5%;
     display: flex;
     justify-content: center;
 }
