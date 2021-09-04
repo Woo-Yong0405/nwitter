@@ -39,7 +39,7 @@ const Nweet = ({nweetObj, isOwner}) => {
                 ) : (
                     <sd className="nweet-message">
                     <h4>{nweetObj.text}</h4>
-                    {nweetObj.attachmentUrl && <img src={nweetObj.attachmentUrl} width="50px" height="50px" alt="" />}
+                    {nweetObj.attachmentUrl && <img className="nweet-message_img" src={nweetObj.attachmentUrl} width="50px" height="50px" alt="" />}
                         {isOwner && (
                             <da className="isowner">
                                 <button className="isowner_delete" onClick={onDeleteClick}>Delete Nweet</button>

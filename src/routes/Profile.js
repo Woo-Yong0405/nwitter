@@ -6,8 +6,11 @@ const Profile = ({refreshUser, userObj}) => {
     const history = useHistory();
     const [newDisplayName, setNewDisplayName] = useState(userObj.displayName);
     const onLogOutClick = () => {
-        authService.signOut();
-        history.push("/");
+        const ok = window.confirm("Are you sure you want to log out?")
+        if(ok) {
+            authService.signOut();
+            history.push("/");
+        }
     };
     const onChange = (event) => {
         const {
@@ -25,14 +28,14 @@ const Profile = ({refreshUser, userObj}) => {
         }
     }
     return (    
-        <>
-        <form onSubmit={onSubmit}>
-            <input type="text" onChange={onChange} placeholder="Display Name" value={newDisplayName} />
-            <input type="submit" value="Update Profile" />
+        <da className="profile">
+        <form className="profile_form" onSubmit={onSubmit}>
+            <input className="profile_form_input" type="text" onChange={onChange} placeholder="Display Name" value={newDisplayName} />
+            <input className="profile_form_submit" type="submit" value="Update Profile" />
         </form>
-        <button onClick={onLogOutClick}>Log Out</button>
+        <button className="logout" onClick={onLogOutClick}>Log Out</button>
         <footer>Nwitter Version 0.0 Last Editied: 2021.8.30</footer>
-        </>
+        </da>
     )
 }
 

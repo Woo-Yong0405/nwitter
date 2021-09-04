@@ -11,10 +11,12 @@
 .isowner_edit,
 .editing_submit,
 .editing_cancel,
-.editing_deleteimg {
+.editing_deleteimg,
+.profile_form_submit,
+.logout {
     background-color: #F5F8FA;
     border: none;
-    border-radius: 10%;
+    border-radius: 10px;
 }
 .editing {
     display: flex;
@@ -35,4 +37,7 @@
 }
 .editing_deleteimg {
     margin-right: 5px;
+}
+.nweet-message_img {
+    margin-left: 10px;
 }

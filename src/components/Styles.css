@@ -2,6 +2,7 @@
 @import "Nav.css";
 @import "Home.css";
 @import "Nweet.css";
+@import "Profile.css";
 
 body {
     width: 100%;

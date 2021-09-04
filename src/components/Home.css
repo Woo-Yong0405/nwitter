@@ -42,7 +42,7 @@
 ::-webkit-file-upload-button {
     background-color: #F5F8FA;
     border:none;
-    border-radius: 10%;
+    border-radius: 10px;
     font-size: small;
     margin-bottom: 10px;
 }
@@ -60,5 +60,5 @@
 .nweet_nweet {
     background-color: #F5F8FA;
     border: none;
-    border-radius: 10%;
+    border-radius: 10px;
 }
